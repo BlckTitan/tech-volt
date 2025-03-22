@@ -1,4 +1,4 @@
-import Navigation from '@/component/Navigation'
+import Navigation from '@/component/navigation/Navigation'
 import Sidebar from  '@/component/Sidebar'
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <section>
         <Sidebar/>
       </section>
-      
+
     </div>
   );
 }
