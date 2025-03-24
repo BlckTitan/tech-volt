@@ -52,7 +52,7 @@ const items = [
                             <SidebarMenuItem key={item.title} className="border-l-3 border-l-white hover:border-l-gray-800 !mb-2">
                                 <SidebarMenuButton asChild className="!px-2 !py-5">
                                     <a href={item.url}>
-                                        <span  className="text-lg cursor-pointer" >
+                                        <span className="text-xl cursor-pointer" >
                                             <item.icon/>
                                         </span>
                                         <span className="text-lg cursor-pointer">{item.title}</span>
