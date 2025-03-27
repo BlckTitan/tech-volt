@@ -1,8 +1,10 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Image from 'next/image'
 
 import './forYou.css'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 // image import
 import AC from '../../../public/img/image-AC.webp'
@@ -30,6 +32,9 @@ const data = [
 ]
 
 export default function ForYouComponent() {
+
+  const [activeTab, setActiveTab] = useState('bestDeal')
+
   return (
     <section className='w-full h-fit !py-6 md:h-screen bg-white flex flex-col justify-center items-center'>
 
@@ -40,37 +45,140 @@ export default function ForYouComponent() {
 
       <div className='w-9/12 h-fit md:h-[700px] flex flex-col md:flex-row justify-between items-center '>
 
-          {data.map((item, index) => (
-              <Card key={index} className='w-full md:w-[450px] h-fit md:h-[650px] !p-4 !mt-3 md:mt-0 bg-white border border-gray-300'>    
-                  <CardHeader className='w-full h-5/12'>
-                      <Image src={item.image} alt={item.title} className='w-full h-full md:object-cover object-center'/>
-                  </CardHeader>
+          <Tabs defaultValue="bestDeal" className="w-full">
 
-                  <CardContent className='w-full h-6/12 !m-0 !p-0'>
+            <TabsList>
 
-                      <CardTitle className='card-title w-full h-40'>{item.title}</CardTitle>
+              <TabsTrigger 
+                value="bestDeal" 
+                onClick={() => setActiveTab('bestDeal')}
+                className={(activeTab === 'bestDeal') ? 'tabTrigger active' : 'tabTrigger'}
+              >
+                Best Deal
+              </TabsTrigger>
 
-                      <CardDescription className='card-description !mb-3 !text-lg'>
-                        {item.description}
-                        <span className='line-through'>{` ${item.discountPrice}`}</span>
-                        <span className='text-black text-xl !font-medium'>{` ${item.discount}% Off`}</span>
-                      </CardDescription>
+              <TabsTrigger 
+                value="mostPopular" 
+                onClick={() => setActiveTab('mostPopular')}
+                className={(activeTab === 'mostPopular') ? 'tabTrigger active' : 'tabTrigger'}
+              >
+                Most Popular
+              </TabsTrigger>
 
-                      <CardDescription className='text-3xl font-semibold'>{item.price}</CardDescription>
+              <TabsTrigger 
+                value="newest" 
+                onClick={() => setActiveTab('newest')}
+                className={(activeTab === 'newest') ? 'tabTrigger active' : 'tabTrigger'}
+              >
+                Newest
+              </TabsTrigger>
 
-                  </CardContent>
+            </TabsList>
 
-                  <CardFooter className='w-full h-1/12 flex flex-col md:flex-row justify-between items-center'>
-                    <Button 
-                      variant="outline" 
-                      className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 md:!mb-0'
-                    >Learn More</Button>
-                    <Button variant="outline" className='action-button text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
-                  </CardFooter>
+            {/* best deal tab */}
+            <TabsContent value="bestDeal" className='tab-content'>
+              {data.map((item, index) => (
+                  <Card key={index} className='w-full md:w-[450px] h-fit md:h-[650px] !p-4 !mt-3 md:mt-0 bg-white border border-gray-300'>    
+                      <CardHeader className='w-full h-5/12'>
+                          <Image src={item.image} alt={item.title} className='w-full h-full md:object-cover object-center'/>
+                      </CardHeader>
 
-              </Card>
-          ))}
+                      <CardContent className='w-full h-6/12 !m-0 !p-0'>
 
+                          <CardTitle className='card-title w-full h-40'>{item.title}</CardTitle>
+
+                          <CardDescription className='card-description !mb-3 !text-lg'>
+                            {item.description}
+                            <span className='line-through'>{` ${item.discountPrice}`}</span>
+                            <span className='text-black text-xl !font-medium'>{` ${item.discount}% Off`}</span>
+                          </CardDescription>
+
+                          <CardDescription className='text-3xl font-semibold'>{item.price}</CardDescription>
+
+                      </CardContent>
+
+                      <CardFooter className='w-full h-1/12 flex flex-col md:flex-row justify-between items-center'>
+                        <Button 
+                          variant="outline" 
+                          className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 md:!mb-0'
+                        >Learn More</Button>
+                        <Button variant="outline" className='action-button text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
+                      </CardFooter>
+
+                  </Card>
+              ))}
+            </TabsContent>
+
+            {/* most popular tab */}
+            <TabsContent value="mostPopular" className='tab-content '>
+            {data.map((item, index) => (
+                  <Card key={index} className='w-full md:w-[450px] h-fit md:h-[650px] !p-4 !mt-3 md:mt-0 bg-white border border-gray-300'>    
+                      <CardHeader className='w-full h-5/12'>
+                          <Image src={item.image} alt={item.title} className='w-full h-full md:object-cover object-center'/>
+                      </CardHeader>
+
+                      <CardContent className='w-full h-6/12 !m-0 !p-0'>
+
+                          <CardTitle className='card-title w-full h-40'>{item.title}</CardTitle>
+
+                          <CardDescription className='card-description !mb-3 !text-lg'>
+                            {item.description}
+                            <span className='line-through'>{` ${item.discountPrice}`}</span>
+                            <span className='text-black text-xl !font-medium'>{` ${item.discount}% Off`}</span>
+                          </CardDescription>
+
+                          <CardDescription className='text-3xl font-semibold'>{item.price}</CardDescription>
+
+                      </CardContent>
+
+                      <CardFooter className='w-full h-1/12 flex flex-col md:flex-row justify-between items-center'>
+                        <Button 
+                          variant="outline" 
+                          className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 md:!mb-0'
+                        >Learn More</Button>
+                        <Button variant="outline" className='action-button text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
+                      </CardFooter>
+
+                  </Card>
+              ))}
+            </TabsContent>
+
+            {/* newest tab */}
+            <TabsContent value="newest" className='tab-content '>
+            {data.map((item, index) => (
+                  <Card key={index} className='w-full md:w-[450px] h-fit md:h-[650px] !p-4 !mt-3 md:mt-0 bg-white border border-gray-300'>    
+                      <CardHeader className='w-full h-5/12'>
+                          <Image src={item.image} alt={item.title} className='w-full h-full md:object-cover object-center'/>
+                      </CardHeader>
+
+                      <CardContent className='w-full h-6/12 !m-0 !p-0'>
+
+                          <CardTitle className='card-title w-full h-40'>{item.title}</CardTitle>
+
+                          <CardDescription className='card-description !mb-3 !text-lg'>
+                            {item.description}
+                            <span className='line-through'>{` ${item.discountPrice}`}</span>
+                            <span className='text-black text-xl !font-medium'>{` ${item.discount}% Off`}</span>
+                          </CardDescription>
+
+                          <CardDescription className='text-3xl font-semibold'>{item.price}</CardDescription>
+
+                      </CardContent>
+
+                      <CardFooter className='w-full h-1/12 flex flex-col md:flex-row justify-between items-center'>
+                        <Button 
+                          variant="outline" 
+                          className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 md:!mb-0'
+                        >Learn More</Button>
+                        <Button variant="outline" className='action-button text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
+                      </CardFooter>
+
+                  </Card>
+              ))}
+            </TabsContent>
+
+          </Tabs>
+         
       </div>
     </section>
   )
