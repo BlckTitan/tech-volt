@@ -7,36 +7,67 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, 
 // image import
 import AC from '../../../public/img/image-AC.webp'
 import washingMachine from '../../../public/img/image-washing-machine.webp'
+import refrigerator from '../../../public/img/refrigerator.webp'
+import microwave from '../../../public/img/electronics-microwave.webp'
 import { Button } from '@/components/ui/button'
 
 const data = [
-  {id: 1, title: 'Fantastic deals await!', description:'Do not miss our promotions on home appliances, audio and video products', image: AC},
-  {id: 2, title: 'Be an TechVolt member', description:'Enjoy all the membership benefits, from special discounts to exclusive services and offers', image: washingMachine},
-  {id: 3, title: 'Gift registration', description:'Check out redemption procedures for promotional gifts', image: AC},
-  {id: 4, title: 'Be an TechVolt member', description:'Enjoy all the membership benefits, from special discounts to exclusive services and offers', image: washingMachine},
+  {
+    id: 1, title: '5 Star (1.5), Split AC, AI Convertible 6-in-1, Gold Fin+ & Black Protection, 2024 Model', 
+    description:'MRP (Incl. of all taxes)', image: AC,
+    price: '$17,800', rating: 4.5, discount: 46, discountPrice: '$85,990' 
+  },
+  {
+    id: 2, title: '650L, Convertible Side-by-Side Refrigerator with Smart Inverter Compressor, Smart Diagnosis', 
+    image: refrigerator, description:'MRP (Incl. of all taxes)',
+    price: '$17,800', rating: 4.5, discount: 46, discountPrice: '$85,990' 
+  },
+  {
+    id: 3, title: '7Kg Front Load Washing Machine, Inverter Direct Drive, Middle Black', image: AC,
+    description:'MRP (Incl. of all taxes)', image: washingMachine,
+    price: '$17,800', rating: 4.5, discount: 46, discountPrice: '$85,990' 
+  }
 ]
 
 export default function ForYouComponent() {
   return (
-    <section className='w-full h-fit !py-6 md:h-screen bg-cyan-100 flex flex-col justify-center items-center'>
-      <header className='w-9/12 h-24 flex justify-start items-start'>
-        <h1 className='component-title'>Picks For You</h1>
+    <section className='w-full h-fit !py-6 md:h-screen bg-white flex flex-col justify-center items-center'>
+
+      <header className='w-9/12 h-24 flex flex-col justify-start items-start'>
+        <h1 className='component-title'>Picks for you</h1>
+        <div className='w-48 h-0.5 bg-gray-600'></div>
       </header>
 
-      <div className='w-9/12 md:h-6/12 flex flex-col md:flex-row justify-between items-center'>
+      <div className='w-9/12 h-fit md:h-[700px] flex flex-col md:flex-row justify-between items-center '>
 
           {data.map((item, index) => (
-              <Card key={index} className='w-80 h-96 !p-4 !mt-3 md:mt-0 bg-white border border-gray-50'>    
+              <Card key={index} className='w-full md:w-[450px] h-fit md:h-[650px] !p-4 !mt-3 md:mt-0 bg-white border border-gray-300'>    
                   <CardHeader className='w-full h-5/12'>
-                      <Image src={item.image} alt={item.title} className='w-full h-full object-cover object-center'/>
+                      <Image src={item.image} alt={item.title} className='w-full h-full md:object-cover object-center'/>
                   </CardHeader>
-                  <CardContent className='w-full h-5/12 '>
-                      <CardTitle className='card-title'>{item.title}</CardTitle>
-                      <CardDescription className='card-description'>{item.description}</CardDescription>
+
+                  <CardContent className='w-full h-6/12 !m-0 !p-0'>
+
+                      <CardTitle className='card-title w-full h-40'>{item.title}</CardTitle>
+
+                      <CardDescription className='card-description !mb-3 !text-lg'>
+                        {item.description}
+                        <span className='line-through'>{` ${item.discountPrice}`}</span>
+                        <span className='text-black text-xl !font-medium'>{` ${item.discount}% Off`}</span>
+                      </CardDescription>
+
+                      <CardDescription className='text-3xl font-semibold'>{item.price}</CardDescription>
+
                   </CardContent>
-                  <CardFooter className='w-full h-2/12 flex items-center'>
-                      <Button variant="outline" className='!p-2 text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
+
+                  <CardFooter className='w-full h-1/12 flex flex-col md:flex-row justify-between items-center'>
+                    <Button 
+                      variant="outline" 
+                      className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 md:!mb-0'
+                    >Learn More</Button>
+                    <Button variant="outline" className='action-button text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
                   </CardFooter>
+
               </Card>
           ))}
 

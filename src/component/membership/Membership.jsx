@@ -20,23 +20,24 @@ export default function MembershipComponent() {
   return (
     <section className='w-full h-fit !py-6 md:h-screen bg-cyan-100 flex flex-col justify-center items-center'>
 
-        <header className='w-9/12 h-24 flex justify-start items-start'>
+        <header className='w-9/12 h-24 flex flex-col justify-start items-start'>
             <h1 className='component-title'>Membership</h1>
+            <div className='w-48 h-0.5 bg-gray-600'></div>
         </header>
 
         <div className='w-9/12 md:h-6/12 flex flex-col md:flex-row justify-between items-center'>
 
             {data.map((item, index) => (
-                <Card key={index} className='w-80 h-96 !p-4 !mt-3 md:mt-0 bg-white border border-gray-50'>    
+                <Card key={index} className='w-80 h-[480px] !p-4 !mt-3 md:mt-0 bg-white border border-gray-50'>    
                     <CardHeader className='w-full h-5/12'>
                         <Image src={item.image} alt={item.title} className='w-full h-full object-cover object-center'/>
                     </CardHeader>
                     <CardContent className='w-full h-5/12 '>
                         <CardTitle className='card-title'>{item.title}</CardTitle>
-                        <CardDescription className='card-description'>{item.description}</CardDescription>
+                        <CardDescription className='card-description w-full h-28 !text-lg'>{item.description}</CardDescription>
                     </CardContent>
                     <CardFooter className='w-full h-2/12 flex items-center'>
-                        <Button variant="outline" className='!p-2 text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
+                        <Button variant="outline" className='action-button rounded-r-full text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
                     </CardFooter>
                 </Card>
             ))}
