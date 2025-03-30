@@ -55,13 +55,11 @@ body {
   } */
 }
 .component-title{
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.05em;
   color: oklch(0.704 0.191 22.216);
-  /* border-bottom: #333 2px solid; 
-  width: 37%; */
 }
 .card-title{
   font-size: 1.4rem;
@@ -116,5 +114,8 @@ body {
   .tab-content{
     flex-direction: row;
     justify-content: space-between;  
+  }
+  .component-title{
+    font-size: 3rem;
   }
 }
