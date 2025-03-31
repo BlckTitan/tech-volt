@@ -5,6 +5,7 @@ import ForYou from '@/component/forYou/ForYou';
 import Highlights from '@/component/highlights/Highlights';
 import Experience from '@/component/experience/Experience';
 import Help from '@/component/help/Help';
+import Footer from '@/component/footer/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Highlights/>
       <Experience/>
       <Help/>
+      <Footer/>
     </div>
   );
 }

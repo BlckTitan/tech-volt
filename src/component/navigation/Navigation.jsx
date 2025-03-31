@@ -17,7 +17,7 @@ export default function NavigationComponent() {
             <nav className='w-full h-full flex items-center justify-between'>
 
                 <div className='w-full md:w-fit flex justify-between items-center'>
-                    <a href='#' className='text-3xl font-semibold text-red-400'>TechVolt</a>
+                    <a href='#' className='site-title text-red-400'>TechVolt</a>
                     
                     {/* the toggle button*/}
                     <button onClick={toggleSidebar} className='inline-block md:hidden text-2xl border border-gray-200 p-3 rounded-md cursor-pointer'>

@@ -54,12 +54,20 @@ body {
     @apply bg-background text-foreground;
   } */
 }
+.site-title{
+  font-size: 48px!important;
+  line-height: calc(2.25 / 1.875 );
+  font-weight: 700;
+}
 .component-title{
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.05em;
-  color: oklch(0.704 0.191 22.216);
+  /* color: oklch(0.704 0.191 22.216); */
+  color: #fff;
+  background-color: #000;
+  padding: .5rem;
 }
 .card-title{
   font-size: 1.4rem;

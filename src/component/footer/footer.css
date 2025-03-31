@@ -1,0 +1,23 @@
+.footer-component p, 
+.footer-component a{
+    font-size: 1.1rem;
+    color: #000;
+}
+.footer-component a:hover{
+    color: oklch(0.704 0.191 22.216);;
+}
+.footer-component section > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 1rem 0px !important;
+}
+.footer-component div > h1{
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+.footer-socials > a{
+    font-size: 1.8rem;
+}

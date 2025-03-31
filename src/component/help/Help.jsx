@@ -44,7 +44,6 @@ export default function ExperienceComponent() {
 
         <div>
           <h1 className='component-title'>Need help?</h1>
-          <div className='w-48 h-0.5 bg-gray-600'></div>
         </div>
 
         <p className='text-xl !mt-4'>
@@ -88,8 +87,8 @@ export default function ExperienceComponent() {
                 <CardFooter className='w-full h-1/12 flex justify-between items-end !mt-4'>
                   <Button variant="outline" className='action-button text-white bg-red-400 hover:bg-red-500'>
                     Learn more
-                    <span>
-                      <MdOutlineArrowRightAlt/>
+                    <span className='font-extralight subpixel-antialiased'>
+                      <MdOutlineArrowRightAlt className='font-extralight subpixel-antialiased'/>
                     </span>
                   </Button>
                 </CardFooter>

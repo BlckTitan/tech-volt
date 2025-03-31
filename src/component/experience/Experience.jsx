@@ -30,8 +30,7 @@ export default function ExperienceComponent() {
       <header className='w-9/12 h-fit md:h-24 flex flex-col justify-start items-start'>
 
         <div>
-          <h1 className='component-title'>TechVolt Experience</h1>
-          <div className='w-48 h-0.5 bg-gray-600'></div>
+          <h1 className='component-title'>TechVolt experience</h1>
         </div>
 
         <p className='text-xl !mt-4'>

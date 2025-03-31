@@ -46,7 +46,6 @@ export default function HighlightsComponent() {
 
       <header className='w-9/12 h-16 flex flex-col justify-start items-start'>
         <h1 className='component-title'>Highlights</h1>
-        <div className='w-48 h-0.5 bg-gray-600'></div>
       </header>
 
       <div className='w-9/12 h-fit md:h-[900px] flex flex-col md:flex-row justify-between items-center '>
