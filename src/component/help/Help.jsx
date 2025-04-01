@@ -38,9 +38,9 @@ const data = [
 export default function ExperienceComponent() {
 
   return (
-    <section className='w-full h-fit !py-6 md:h-screen bg-white flex flex-col justify-center items-center'>
+    <section className='w-full h-fit !p-4 xl:!p-6 xl:h-screen bg-white flex flex-col justify-center items-center'>
 
-      <header className='w-9/12 h-fit md:h-24 flex flex-col justify-start items-start'>
+      <header className='w-full xl:w-9/12 h-fit md:h-24 flex flex-col justify-start items-start'>
 
         <div>
           <h1 className='component-title'>Need help?</h1>
@@ -51,15 +51,15 @@ export default function ExperienceComponent() {
         </p>
       </header>
 
-      <div className='w-9/12 h-fit md:h-[700px] flex flex-col md:flex-row justify-between md:justify-between items-center md:items-center '>
+      <div className='w-full xl:w-9/12 h-fit xl:h-[700px] flex flex-col md:flex-row justify-between md:justify-between items-center md:items-center '>
 
         {/* best deal tab */}
-        <div className='tab-content !grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 !mt-8'>
+        <div className='tab-content !grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 xl:gap-4 !mt-8'>
           {data.map((item, index) => (
               <Card 
                 key={index} 
                 className={
-                  `w-full md:w-[300px] h-fit md:h-[330px] !mt-3 md:mt-0  border border-gray-300 flex flex-col justify-between !px-4 !py-8`
+                  `w-full xl:w-[300px] h-fit md:h-[330px] !mt-3 md:mt-0  border border-gray-300 flex flex-col justify-between !px-4 !py-8`
                 }
               >  
                 <CardHeader  className='w-full h-fit flex items-center justify-between'>

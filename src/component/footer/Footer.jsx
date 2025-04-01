@@ -16,7 +16,7 @@ export default function FooterComponent() {
           {/* site name, about and email */}
           <div className='w-full xl:w-4/12'>
             <a href='#' className='site-title !text-gray-500 hover:!text-red-400'>TechVolt</a>
-            <p className='!my-4 md:!my-0'>
+            <p className='w-8/12 xl:w-full !my-4 md:!my-0'>
               TechVolt: Unleashing Innovation, Redefining Convenience &#45; Your Ultimate Destination for Seamless Tech Exploration and Empowerment.
             </p>
             
