@@ -57,7 +57,7 @@ export default function FooterComponent() {
         </section>
 
         <section className='w-full h-[8vh] border-t border-solid border-amber-200 flex items-center justify-center !px-6 md:!px-0'>
-          <p className='text-xl'>&copy; Copyright 2024 TechVolt. All rights reserved</p>
+          <p className='text-xl text-center'>&copy; Copyright 2024 TechVolt. All rights reserved</p>
         </section>
 
       </section>
