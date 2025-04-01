@@ -25,9 +25,9 @@ const data = [
 export default function ExperienceComponent() {
 
   return (
-    <section className='w-full h-fit !py-6 md:h-screen bg-white flex flex-col justify-center items-center'>
+    <section className='w-full h-fit !py-6 xl:!py-0 xl:h-screen bg-white flex flex-col justify-center items-center'>
 
-      <header className='w-9/12 h-fit md:h-24 flex flex-col justify-start items-start'>
+      <header className='w-full xl:w-9/12 h-fit xl:h-24 !p-4 xl:!p-0 flex flex-col justify-start items-start !mb-8 xl:!mb-0'>
 
         <div>
           <h1 className='component-title'>TechVolt experience</h1>
@@ -38,7 +38,7 @@ export default function ExperienceComponent() {
         </p>
       </header>
 
-      <div className='w-9/12 h-fit md:h-[700px] flex flex-col md:flex-row justify-between md:justify-between items-center md:items-center '>
+      <div className='w-full xl:w-9/12 h-fit xl:h-[700px] flex flex-col xl:flex-row justify-between xl:justify-between items-center xl:items-center wrap !px-4 xl:!px-0'>
 
         {/* best deal tab */}
         <div className='tab-content'>
@@ -46,7 +46,7 @@ export default function ExperienceComponent() {
               <Card 
                 key={index} 
                 className={
-                  `w-full md:w-[450px] h-fit md:h-[650px] !mt-3 md:mt-0  border border-gray-300 relative`
+                  `w-full xl:w-[450px] h-fit xl:h-[650px] !mt-3 xl:mt-0 border border-gray-300 relative`
                 }
               >    
                 <Image 
