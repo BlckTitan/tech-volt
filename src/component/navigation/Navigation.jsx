@@ -12,20 +12,20 @@ export default function NavigationComponent() {
     const { toggleSidebar } = useSidebar()
 
   return (
-    <header className='w-full h-20 md:h-52 !px-4 md:!px-0 bg-white flex flex-col justify-center items-center'>
-        <div className='w-full md:w-9/12 h-8/12'>
+    <header className='w-full h-20 md:h-52 !px-4 xl:!px-0 bg-white flex flex-col justify-center items-center'>
+        <div className='w-full xl:w-9/12 h-8/12 border-b xl:border-0 border-gray-200'>
             <nav className='w-full h-full flex items-center justify-between'>
 
-                <div className='w-full md:w-fit flex justify-between items-center'>
+                <div className='w-full xl:w-fit flex justify-between items-center'>
                     <a href='#' className='site-title text-red-400'>TechVolt</a>
                     
                     {/* the toggle button*/}
-                    <button onClick={toggleSidebar} className='inline-block md:hidden text-2xl border border-gray-200 p-3 rounded-md cursor-pointer'>
+                    <button onClick={toggleSidebar} className='inline-block xl:hidden text-2xl border border-gray-200 p-3 rounded-md cursor-pointer'>
                         <MdMenu />
                     </button>
                 </div>
 
-                <NavigationMenu className='hidden md:flex'>
+                <NavigationMenu className='hidden xl:flex'>
                     <NavigationMenuList className='nav-link-container'>
 
                         <NavigationMenuItem className='nav-link'>
@@ -47,7 +47,7 @@ export default function NavigationComponent() {
                     </NavigationMenuList>
                 </NavigationMenu>
 
-                <div className='hidden nav-subLink-container md:flex justify-between text-2xl'>
+                <div className='hidden nav-subLink-container xl:flex justify-between text-2xl'>
                     <a href='#'>
                         <MdOutlineSearch />
                     </a>
@@ -61,8 +61,8 @@ export default function NavigationComponent() {
             </nav>
         </div>
         
-        <div className='w-full h-4/12 border-t border-b border-gray-200 md:flex justify-center hidden'>
-            <nav className='w-full md:w-9/12 h-full flex items-center'>
+        <div className='w-full h-4/12 border-t border-b border-gray-200 xl:flex justify-center hidden'>
+            <nav className='w-full xl:w-9/12 h-full flex items-center'>
                 
             <Breadcrumb>
 
