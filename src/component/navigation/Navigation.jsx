@@ -12,7 +12,7 @@ export default function NavigationComponent() {
     const { toggleSidebar } = useSidebar()
 
   return (
-    <header className='w-full h-20 md:h-52 !px-4 xl:!px-0 bg-white flex flex-col justify-center items-center'>
+    <header className='w-full h-20 md:h-32 xl:h-52 !px-4 xl:!px-0 bg-white flex flex-col justify-center items-center'>
         <div className='w-full xl:w-9/12 h-8/12 border-b xl:border-0 border-gray-200'>
             <nav className='w-full h-full flex items-center justify-between'>
 
@@ -20,7 +20,7 @@ export default function NavigationComponent() {
                     <a href='#' className='site-title text-red-400'>TechVolt</a>
                     
                     {/* the toggle button*/}
-                    <button onClick={toggleSidebar} className='inline-block xl:hidden text-2xl border border-gray-200 p-3 rounded-md cursor-pointer'>
+                    <button onClick={toggleSidebar} className='inline-block xl:hidden text-2xl md:text-4xl border border-gray-200 p-3 rounded-md cursor-pointer'>
                         <MdMenu />
                     </button>
                 </div>

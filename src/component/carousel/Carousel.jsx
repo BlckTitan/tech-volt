@@ -51,9 +51,9 @@ export default function CarouselComponent() {
     }
   ]
   return (
-    <section className='carousel-container flex justify-center items-center !pt-4 md:!pt-0'>
+    <section className='carousel-container flex justify-center items-center !pt-4 xl:!pt-0'>
       {/* added paddint top to test the carousel display */}
-      <div className='w-11/12 md:w-9/12 bg-white'>
+      <div className='w-11/12 xl:w-9/12 bg-white'>
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -74,7 +74,7 @@ export default function CarouselComponent() {
                     alt='image1'
                     className='carousel-image'
                   />
-                  <div className='w-8/12 md:w-4/12 h-fit bg-black absolute left-8 text-white !p-4'>
+                  <div className='w-8/12 xl:w-4/12 h-fit bg-black absolute left-8 text-white !p-4'>
                     <h1 className='text-xl font-bold md:text-2xl font-stretch-ultra-expanded tracking-wide !mb-2'>{item.title}</h1>
                     <p className='text-sm'>{item.shortDescription}</p>
                     <a href="http://#" className='w-fit !mt-4 flex items-center text-sm text-white bg-red-400 !px-4 !py-2 rounded-md hover:bg-red-500'>
