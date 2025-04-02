@@ -42,22 +42,22 @@ export default function HighlightsComponent() {
   const [activeTab, setActiveTab] = useState('objetCollection')
 
   return (
-    <section className='w-full h-fit md:h-[140vh] bg-white flex flex-col justify-center items-center'>
+    <section className='w-full h-fit xl:h-[140vh] !px-6 xl:!px-0 bg-white flex flex-col justify-center items-center'>
 
-      <header className='w-9/12 h-16 flex flex-col justify-start items-start'>
+      <header className='w-full xl:w-9/12 h-16 flex flex-col justify-center items-start'>
         <h1 className='component-title'>Highlights</h1>
       </header>
 
-      <div className='w-9/12 h-fit md:h-[900px] flex flex-col md:flex-row justify-between items-center '>
+      <div className='w-full xl:w-9/12 h-fit xl:h-[780px] flex flex-col xl:flex-row justify-between items-center  !mt-8 xl:!mt-0'>
 
           <Tabs defaultValue="objetCollection" className="w-full">
 
-            <TabsList>
+            <TabsList className="w-full overflow-x-scroll xl:overflow-x-hidden !px-8 xl:!px-8">
 
               <TabsTrigger 
                 value="objetCollection" 
                 onClick={() => setActiveTab('objetCollection')}
-                className={(activeTab === 'objetCollection') ? 'tabTrigger active' : 'tabTrigger'}
+                className={(activeTab === 'objetCollection') ? 'tabTrigger active !ml-4 md:!ml-0' : 'tabTrigger !ml-4 md:!ml-0'}
               >
                 Objet Collection
               </TabsTrigger>
@@ -99,7 +99,7 @@ export default function HighlightsComponent() {
             {/* objet collection tab */}
             <TabsContent value="objetCollection" className='tab-content flex !flex-col'>
 
-              <div className='w-full h-[400px] md:h-[650px] !my-3 md:rounded-2xl'>
+              <div className='w-full h-[400px] xl:h-[650px] !my-3 md:rounded-2xl'>
                   
                 {objetData.map((item, index) => (
                   <section key={index}>
@@ -122,11 +122,11 @@ export default function HighlightsComponent() {
 
             {/* lifestyle tab */}
             <TabsContent value="lifestyleScreens" className='tab-content'>
-             <div className='w-full h-[400px] md:h-[650px] !my-3 md:rounded-2xl'>
+             <div className='w-full h-[400px] xl:h-[650px] !my-3 md:rounded-2xl'>
                   
                   {objetData.map((item, index) => (
                     <section key={index}>
-                      <div className='highlight-screen w-full h-8/12'>
+                      <div className='highlight-screen w-full h-fit xl:h-8/12'>
   
                       </div>
   
@@ -166,14 +166,14 @@ export default function HighlightsComponent() {
          
       </div>
 
-      <div className='w-full h-fit flex flex-col md:flex-row items-center md:justify-center md:items-center !py-4 md:!py-0 bg-amber-100 md:!rounded-2xl'>
+      <div className='w-full h-fit flex flex-col xl:flex-row items-center md:justify-center md:items-center !px-6 xl:!px-0 !py-6 md:!py-0 bg-amber-100 md:!rounded-2xl'>
 
-        <div className='w-9/12 h-fit md:h-[40vh] flex flex-col md:flex-row items-center md:justify-between md:items-center !py-4'>
+        <div className='w-full xl:w-9/12 h-fit xl:h-[40vh] flex flex-col xl:flex-row items-center xl:justify-between xl:items-center !py-4'>
           {subCategory.map((item, index) => (
-            <div key={index} className='w-full md:w-[400px] h-[300px] !mb-4 md:!mb-0'>
+            <div key={index} className='w-full xl:w-[400px] h-[450px] xl:h-[300px] !mb-8 xl:!mb-0'>
 
               <div>
-                  <Image src={item.image} alt={item.title} className='w-full h-[200px] md:object-cover object-center !rounded-t-2xl'/>
+                  <Image src={item.image} alt={item.title} className='w-full h-[350px] xl:h-[200px] object-cover object-center !rounded-t-2xl'/>
               </div>
 
               <div className='w-full !p-4 !mt-8'>
