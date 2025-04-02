@@ -18,7 +18,7 @@
 
 @media only screen and (min-width: 1280px) {
     .nav-link-container{
-        width: 1280px;
+        width: 768px;
         display: flex;
         justify-content: space-between;
     }

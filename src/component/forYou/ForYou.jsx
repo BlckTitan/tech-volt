@@ -36,13 +36,13 @@ export default function ForYouComponent() {
   const [activeTab, setActiveTab] = useState('bestDeal')
 
   return (
-    <section className='w-full h-fit !py-6 md:h-screen bg-white flex flex-col justify-center items-center'>
+    <section className='w-full h-fit !py-6 xl:h-screen bg-white flex flex-col justify-center items-center !px-6 xl:!px-0'>
 
-      <header className='w-9/12 h-24 flex flex-col justify-start items-start'>
+      <header className='w-full xl:w-9/12 h-24 flex flex-col justify-start items-start'>
         <h1 className='component-title'>Picks for you</h1>
       </header>
 
-      <div className='w-9/12 h-fit md:h-[700px] flex flex-col md:flex-row justify-between items-center '>
+      <div className='w-full xl:w-9/12 h-fit xl:h-[700px] flex flex-col xl:flex-row justify-between items-center '>
 
           <Tabs defaultValue="bestDeal" className="w-full">
 
@@ -77,14 +77,14 @@ export default function ForYouComponent() {
             {/* best deal tab */}
             <TabsContent value="bestDeal" className='tab-content'>
               {data.map((item, index) => (
-                  <Card key={index} className='w-full md:w-[450px] h-fit md:h-[650px] !p-4 !mt-3 md:mt-0 bg-white border border-gray-300'>    
+                  <Card key={index} className='w-full xl:w-[450px] h-fit xl:h-[650px] !p-4 !mt-3 xl:mt-0 bg-white border border-gray-300'>    
                       <CardHeader className='w-full h-5/12'>
-                          <Image src={item.image} alt={item.title} className='w-full h-full md:object-cover object-center'/>
+                          <Image src={item.image} alt={item.title} className='w-full h-full xl:object-cover object-center'/>
                       </CardHeader>
 
                       <CardContent className='w-full h-6/12 !m-0 !p-0'>
 
-                          <CardTitle className='card-title w-full h-40'>{item.title}</CardTitle>
+                          <CardTitle className='card-title w-full h-25 xl:h-40 '>{item.title}</CardTitle>
 
                           <CardDescription className='card-description !mb-3 !text-lg'>
                             {item.description}
@@ -96,10 +96,10 @@ export default function ForYouComponent() {
 
                       </CardContent>
 
-                      <CardFooter className='w-full h-1/12 flex flex-col md:flex-row justify-between items-center'>
+                      <CardFooter className='w-full h-1/12 flex flex-col xl:flex-row justify-between items-center'>
                         <Button 
                           variant="outline" 
-                          className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 md:!mb-0'
+                          className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 xl:!mb-0'
                         >Learn More</Button>
                         <Button variant="outline" className='action-button text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
                       </CardFooter>
@@ -111,14 +111,14 @@ export default function ForYouComponent() {
             {/* most popular tab */}
             <TabsContent value="mostPopular" className='tab-content '>
             {data.map((item, index) => (
-                  <Card key={index} className='w-full md:w-[450px] h-fit md:h-[650px] !p-4 !mt-3 md:mt-0 bg-white border border-gray-300'>    
+                  <Card key={index} className='w-full xl:w-[450px] h-fit xl:h-[650px] !p-4 !mt-3 xl:mt-0 bg-white border border-gray-300'>    
                       <CardHeader className='w-full h-5/12'>
-                          <Image src={item.image} alt={item.title} className='w-full h-full md:object-cover object-center'/>
+                          <Image src={item.image} alt={item.title} className='w-full h-full xl:object-cover object-center'/>
                       </CardHeader>
 
                       <CardContent className='w-full h-6/12 !m-0 !p-0'>
 
-                          <CardTitle className='card-title w-full h-40'>{item.title}</CardTitle>
+                          <CardTitle className='card-title w-full h-25 xl:h-40'>{item.title}</CardTitle>
 
                           <CardDescription className='card-description !mb-3 !text-lg'>
                             {item.description}
@@ -130,10 +130,10 @@ export default function ForYouComponent() {
 
                       </CardContent>
 
-                      <CardFooter className='w-full h-1/12 flex flex-col md:flex-row justify-between items-center'>
+                      <CardFooter className='w-full h-1/12 flex flex-col xl:flex-row justify-between items-center'>
                         <Button 
                           variant="outline" 
-                          className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 md:!mb-0'
+                          className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 xl:!mb-0'
                         >Learn More</Button>
                         <Button variant="outline" className='action-button text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
                       </CardFooter>
@@ -145,14 +145,14 @@ export default function ForYouComponent() {
             {/* newest tab */}
             <TabsContent value="newest" className='tab-content '>
             {data.map((item, index) => (
-                  <Card key={index} className='w-full md:w-[450px] h-fit md:h-[650px] !p-4 !mt-3 md:mt-0 bg-white border border-gray-300'>    
+                  <Card key={index} className='w-full xl:w-[450px] h-fit xl:h-[650px] !p-4 !mt-3 xl:mt-0 bg-white border border-gray-300'>    
                       <CardHeader className='w-full h-5/12'>
-                          <Image src={item.image} alt={item.title} className='w-full h-full md:object-cover object-center'/>
+                          <Image src={item.image} alt={item.title} className='w-full h-full xl:object-cover object-center'/>
                       </CardHeader>
 
                       <CardContent className='w-full h-6/12 !m-0 !p-0'>
 
-                          <CardTitle className='card-title w-full h-40'>{item.title}</CardTitle>
+                          <CardTitle className='card-title w-full h-25 xl:h-40'>{item.title}</CardTitle>
 
                           <CardDescription className='card-description !mb-3 !text-lg'>
                             {item.description}
@@ -164,11 +164,15 @@ export default function ForYouComponent() {
 
                       </CardContent>
 
-                      <CardFooter className='w-full h-1/12 flex flex-col md:flex-row justify-between items-center'>
+                      <CardFooter className='w-full h-1/12 flex flex-col xl:flex-row items-center justify-center xl:justify-between xl:items-center !mb-4 xl:!mb-0'>
+                      
                         <Button 
                           variant="outline" 
-                          className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 md:!mb-0'
-                        >Learn More</Button>
+                          className='action-button bg-white !text-gray-800 border border-gray-300 hover:bg-gray-500  hover:!text-white !mb-2 xl:!mb-0'
+                        >
+                          Learn More
+                        </Button>
+
                         <Button variant="outline" className='action-button text-white bg-red-400 hover:bg-red-500'>Buy Now</Button>
                       </CardFooter>
 

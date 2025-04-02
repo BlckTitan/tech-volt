@@ -114,7 +114,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .action-button{
-    width: 50%;
+    width: 70%;
   }
 }
 @media only screen and (min-width: 1280px) {
