@@ -7,10 +7,10 @@ import { useSidebar } from '@/components/ui/sidebar'
 import { MdMenu, MdOutlineLocalMall, MdOutlineSearch, MdPermIdentity } from 'react-icons/md'
   
 
-export default function NavigationComponent() {
+export default function NavigationComponent({subLink}) {
 
     const { toggleSidebar } = useSidebar()
-
+    console.log(subLink)
   return (
     <header className='w-full h-20 md:h-32 xl:h-52 !px-4 xl:!px-0 bg-white flex flex-col justify-center items-center'>
         <div className='w-full xl:w-9/12 h-8/12 border-b xl:border-0 border-gray-200'>
@@ -32,7 +32,7 @@ export default function NavigationComponent() {
                             <a href='#' className='text-black'>Home</a>
                         </NavigationMenuItem>
                         <NavigationMenuItem className='nav-link'>
-                            <a href='#' className='text-black'>Shop</a>
+                            <a href='/shop' className='text-black'>Shop</a>
                         </NavigationMenuItem>
                         <NavigationMenuItem className='nav-link'>
                             <a href='#' className='text-black'>Accessories</a>
@@ -68,15 +68,17 @@ export default function NavigationComponent() {
 
                 <BreadcrumbList className='text-xl flex items-center'>
 
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/" className='text-gray-600'>Home</BreadcrumbLink>
-                    </BreadcrumbItem>
-                    
-                    <BreadcrumbSeparator/>
-                    
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/components">Shop</BreadcrumbLink>
-                    </BreadcrumbItem>
+                    {
+                         subLink && subLink.map((item, index) => (   
+                            <div key={index} className='flex items-center'>
+                                <BreadcrumbItem>
+                                        <BreadcrumbLink href={item.link} className='text-gray-600'>{item.linkName}</BreadcrumbLink>
+                                </BreadcrumbItem>
+                                    
+                                <span className='!ml-2 '>{item.icon}</span>
+                            </div>
+                        ))
+                    }
                 
                 </BreadcrumbList>
 

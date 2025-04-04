@@ -6,11 +6,17 @@ import Highlights from '@/component/highlights/Highlights';
 import Experience from '@/component/experience/Experience';
 import Help from '@/component/help/Help';
 import Footer from '@/component/footer/Footer';
+import { BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 
 export default function Home() {
+
+   const subLink = [
+          { link: '/', icon: <BreadcrumbSeparator/>, linkName: 'Home' },
+    ] 
+
   return (
     <div className='w-full h-screen'>
-      <Navigation/>
+      <Navigation subLink={subLink}/>
       <Carousel/>
       <Membership/>
       <ForYou/>
