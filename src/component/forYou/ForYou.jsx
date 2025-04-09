@@ -25,7 +25,7 @@ const data = [
     price: '$17,800', rating: 4.5, discount: 46, discountPrice: '$85,990' 
   },
   {
-    id: 3, title: '7Kg Front Load Washing Machine, Inverter Direct Drive, Middle Black', image: AC,
+    id: 3, title: '7Kg Front Load Washing Machine, Inverter Direct Drive, Middle Black',
     description:'MRP (Incl. of all taxes)', image: washingMachine,
     price: '$17,800', rating: 4.5, discount: 46, discountPrice: '$85,990' 
   }

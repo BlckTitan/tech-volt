@@ -10,7 +10,7 @@ import { MdMenu, MdOutlineLocalMall, MdOutlineSearch, MdPermIdentity } from 'rea
 export default function NavigationComponent({subLink}) {
 
     const { toggleSidebar } = useSidebar()
-    console.log(subLink)
+    
   return (
     <header className='w-full h-20 md:h-32 xl:h-52 !px-4 xl:!px-0 bg-white flex flex-col justify-center items-center'>
         <div className='w-full xl:w-9/12 h-8/12 border-b xl:border-0 border-gray-200'>
@@ -29,7 +29,7 @@ export default function NavigationComponent({subLink}) {
                     <NavigationMenuList className='nav-link-container'>
 
                         <NavigationMenuItem className='nav-link'>
-                            <a href='#' className='text-black'>Home</a>
+                            <a href='/' className='text-black'>Home</a>
                         </NavigationMenuItem>
                         <NavigationMenuItem className='nav-link'>
                             <a href='/shop' className='text-black'>Shop</a>
