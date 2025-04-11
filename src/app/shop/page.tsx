@@ -115,18 +115,70 @@ export default function Shop() {
                         <div className='w-full h-fit flex flex-col justify-start items-start'>
                           {
                             item.category.map((category, index) => (
-                              <div key={index} className='w-full h-fit flex justify-start items-center !ml-2'>
-                                <Checkbox id={category.name} />
+                              <div key={index} className='w-full h-fit flex justify-start items-center'>
+
+                                {/* checkbox for name */}
+                                {
+                                  'name' in category
+                                  && <Checkbox id={category.name} className='!ml-0' />
+                                }
+
+                                {/* label for name */}
                                 <label
-                                  htmlFor={category.name}
+                                  htmlFor={'name' in category ? category.name : undefined}
+                                  className="w-full text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 !ml-2 !my-2"
+                                >
+
+                                  {('name' in category) && category.name} 
+                                  
+                                </label>
+                                
+                                {/* checkbox for price */}
+                                {
+                                  'price' in category
+                                  && <Checkbox id={`${category.price}`} className='!-ml-66'/>
+                                }
+
+                                {/* label for price */}
+                                <label
+                                  htmlFor={'price' in category ? String(category.price) : undefined}
                                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 !ml-2 !my-2"
                                 >
-                                  {
-                                    category.name || 
-                                    category.price|| 
-                                    category.condition || 
-                                    category.rating}
+
+                                  {('price' in category) && category.price} 
+                                  
                                 </label>
+
+                                {/* checkbox for condition */}
+                                {
+                                  'condition' in category
+                                  && <Checkbox id={`${category.condition}`}  className='!-ml-74'/>
+                                }
+
+                                {/* label for condition */}
+                                <label
+                                  htmlFor={'condition' in category ? category.condition : undefined}
+                                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 !ml-2 !my-2"
+                                >
+
+                                  {('condition' in category) && category.condition}
+                                  
+                                </label>
+
+                                 {/* label for rating */}
+                                 {
+                                  'rating' in category
+                                  && <Checkbox id={`${category.rating}`} className='!-ml-88'/>
+                                }
+                                <label
+                                  htmlFor={'rating' in category ? category.rating : undefined}
+                                  className="w-full text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 !ml-2 !my-2"
+                                >
+
+                                  {('rating' in category) && category.rating}
+                                  
+                                </label>
+                                  
                               </div>
                             ))
                           }
