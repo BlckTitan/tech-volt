@@ -21,7 +21,7 @@ const items = [
     },
     {
       title: "Shop",
-      url: "#",
+      url: "/shop",
       icon: MdOutlineLocalGroceryStore,
     },
     {
