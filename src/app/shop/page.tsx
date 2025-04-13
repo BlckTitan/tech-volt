@@ -168,7 +168,7 @@ export default function Shop() {
                                  {/* label for rating */}
                                  {
                                   'rating' in category
-                                  && <Checkbox id={`${category.rating}`} className='!-ml-88'/>
+                                  && <Checkbox id={`${category.rating}`} className='!-ml-88  '/>
                                 }
                                 <label
                                   htmlFor={'rating' in category ? category.rating : undefined}

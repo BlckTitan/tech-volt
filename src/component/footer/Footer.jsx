@@ -7,7 +7,7 @@ import './footer.css'
 export default function FooterComponent() {
 
   return (
-    <footer className='footer-component w-full h-fit xl:h-[30vh] !py-6 bg-amber-100 border-t border-solid border-amber-200 flex flex-col justify-center items-center'>
+    <footer className='footer-component w-full h-fit xl:h-[30vh] !py-6 border-t border-solid border-[#cccccc] flex flex-col justify-center items-center'>
 
       <section  className='w-full xl:w-9/12'>
         
@@ -56,7 +56,7 @@ export default function FooterComponent() {
           </div>
         </section>
 
-        <section className='w-full h-[8vh] border-t border-solid border-amber-200 flex items-center justify-center !px-6 md:!px-0'>
+        <section className='w-full h-[8vh] border-t border-solid border-[#cccccc] flex items-center justify-center !px-6 md:!px-0'>
           <p className='text-xl text-center'>&copy; Copyright 2024 TechVolt. All rights reserved</p>
         </section>
 
