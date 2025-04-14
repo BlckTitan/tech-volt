@@ -125,7 +125,8 @@ footer form > button{
   font-weight:900;
   font-stretch: ultra-expanded;
 }
-.signUp-form > input{
+.signUp-form > input,
+.signUp-form > div > div > input{
   width: 100%;
   height: 50px;
   padding: 0.5rem;

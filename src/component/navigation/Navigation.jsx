@@ -69,7 +69,7 @@ export default function NavigationComponent({subLink}) {
                 <BreadcrumbList className='text-xl flex items-center'>
 
                     {
-                         subLink && subLink.map((item, index) => (   
+                        subLink && subLink.map((item, index) => (   
                             <div key={index} className='flex items-center'>
                                 <BreadcrumbItem>
                                         <BreadcrumbLink href={item.link} className='text-gray-600'>{item.linkName}</BreadcrumbLink>
