@@ -6,7 +6,7 @@ import Footer from '../../component/footer/Footer'
 import { BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { useForm } from 'react-hook-form';
 
-export default function Page() {
+export default function Login() {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);

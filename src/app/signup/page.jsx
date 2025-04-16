@@ -9,7 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import Navigation from '../../component/navigation/Navigation'
 import Footer from '../../component/footer/Footer'
 
-export default function page() {
+export default function Signup() {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
@@ -95,7 +95,7 @@ export default function page() {
 
                                 <label
                                     htmlFor="terms"
-                                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 !ml-2"
+                                    className="text-base font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 !ml-2"
                                 >
                                     By signing up I agree to the Terms & Conditions and Privacy Policy
                                 </label>
