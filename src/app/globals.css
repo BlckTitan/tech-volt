@@ -72,8 +72,7 @@ body {
 .card-title{
   font-size: 1.4rem;
   line-height: 1.5;
-  margin-bottom: 1rem;
-
+  margin-bottom: 2.8rem;
 }
 .card-description{
   columns: #736964;
@@ -144,9 +143,9 @@ footer form > button{
   }
 }
 @media only screen and (min-width: 1280px) {
-  /* .component-title{
-    width: 7%;
-  } */
+  .card-title{
+    margin-bottom: 1rem;
+  }
   .action-button{
     width: 150px;
     height: 50px;

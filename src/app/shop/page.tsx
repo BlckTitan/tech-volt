@@ -8,6 +8,8 @@ import Footer from '@/component/footer/Footer';
 import { BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import Image from 'next/image'
 
+import Pagination from '@/component/pagination/Pagination'
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
 
 // image import
@@ -93,7 +95,7 @@ export default function Shop() {
     <section className='w-full h-fit flex flex-col justify-between'>
         <Navigation subLink={subLink}/>
         
-        <section className='w-full h-fit !py-6 xl:h-screen bg-white flex flex-col xl:flex-row justify-center items-center !px-6 xl:!px-0'>
+        <section className='w-full h-fit !py-6 xl:h-[calc(100vh-13rem) bg-white flex flex-col xl:flex-row justify-center items-center !px-6 xl:!px-0'>
         
           <div className='w-full xl:w-9/12 h-fit flex flex-col xl:flex-row justify-between items-start '>
 
@@ -191,9 +193,11 @@ export default function Shop() {
               </Accordion>
             </div>
       
-            <div className='w-full xl:w-9/12 h-fit xl:h-[700px] flex flex-col xl:flex-row justify-between items-start'>
-      
-              {/* best deal tab */}
+            <main className='w-full xl:w-9/12'>
+              {/* product section */}
+              <div className='w-full h-fit xl:h-[700px] flex flex-col xl:flex-row justify-between items-start'>
+              
+                {/* best deal tab */}
                 {data.map((item, index) => (
                   <Card key={index} className='w-full xl:w-[340px] h-fit xl:h-[650px] !p-4 !mt-3 xl:!mt-0 bg-white border border-gray-300'>    
                     <CardHeader className='w-full h-5/12'>
@@ -226,7 +230,17 @@ export default function Shop() {
                 ))}
 
               </div>
+
+              {/* pagination */}
+              <div className='w-full h-fit flex justify-center items-center !mt-6 xl:!mt-4'>
+                <Pagination/>
+              </div>
+              
+            </main>
+            
+
             </div>
+
           </section>
 
         <Footer/>
