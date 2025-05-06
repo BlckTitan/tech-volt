@@ -4,7 +4,7 @@
     color: #000;
 }
 .footer-component a:hover{
-    color: oklch(0.704 0.191 22.216);;
+    color: oklch(0.704 0.191 22.216);
 }
 .footer-component section > div{
     height: 100%;
