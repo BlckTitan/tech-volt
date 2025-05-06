@@ -27,7 +27,7 @@ export default function PaginationComponent() {
             </PaginationItem>
 
             <PaginationItem>
-                <PaginationLink href="#">3</PaginationLink>
+                <PaginationLink href="#">2</PaginationLink>
             </PaginationItem>
 
             <PaginationItem>

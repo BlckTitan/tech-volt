@@ -72,14 +72,18 @@ export default function NavigationComponent({subLink}) {
                         subLink && subLink.map((item, index) => (   
                             <div key={index} className='flex items-center'>
                                 <BreadcrumbItem>
-                                        <BreadcrumbLink href={item.link} className='text-gray-600'>{item.linkName}</BreadcrumbLink>
+                                
+                                {
+                                    (index+1 === subLink.length) ? 
+                                    <BreadcrumbLink href={item.link} className='text-black'>{item.linkName}</BreadcrumbLink> :
+                                    <BreadcrumbLink href={item.link} className='text-gray-600'>{item.linkName}</BreadcrumbLink>
+                                }
                                 </BreadcrumbItem>
-                                    
-                                <span className='!ml-2 '>{item.icon}</span>
+                                { (index+1 === subLink.length) ? <span className='!ml-2 hidden'>{item.icon}</span> : <span className='!ml-2 inline-block'>{item.icon}</span>}
+
                             </div>
                         ))
                     }
-                
                 </BreadcrumbList>
 
             </Breadcrumb>
